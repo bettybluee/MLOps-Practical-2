@@ -1,0 +1,105 @@
+conda activate base
+(base) bettykim@ww160830 MLOps-Practical-2 % conda activate base
+(base) bettykim@ww160830 MLOps-Practical-2 % ruff check exam2.py
+E902 No such file or directory (os error 2)
+--> exam2.py:1:1
+
+Found 1 error.
+(base) bettykim@ww160830 MLOps-Practical-2 % ruff check exam2.py
+E401 [*] Multiple imports on one line
+ --> exam2.py:1:1
+  |
+1 | import os, sys
+  | ^^^^^^^^^^^^^^
+2 |
+3 | def add(a,b): return a+b
+  |
+help: Split imports
+
+F401 [*] `os` imported but unused
+ --> exam2.py:1:8
+  |
+1 | import os, sys
+  |        ^^
+2 |
+3 | def add(a,b): return a+b
+  |
+help: Remove unused import
+
+F401 [*] `sys` imported but unused
+ --> exam2.py:1:12
+  |
+1 | import os, sys
+  |            ^^^
+2 |
+3 | def add(a,b): return a+b
+  |
+help: Remove unused import
+
+Found 3 errors.
+[*] 3 fixable with the `--fix` option.
+(base) bettykim@ww160830 MLOps-Practical-2 % ruff check exam2.py --fix
+Found 3 errors (3 fixed, 0 remaining).
+(base) bettykim@ww160830 MLOps-Practical-2 % ruff check example2.py
+E401 [*] Multiple imports on one line
+ --> example2.py:1:1
+  |
+1 | import os, sys
+  | ^^^^^^^^^^^^^^
+2 |
+3 | def add(a,b): return a+b
+  |
+help: Split imports
+
+F401 [*] `os` imported but unused
+ --> example2.py:1:8
+  |
+1 | import os, sys
+  |        ^^
+2 |
+3 | def add(a,b): return a+b
+  |
+help: Remove unused import
+
+F401 [*] `sys` imported but unused
+ --> example2.py:1:12
+  |
+1 | import os, sys
+  |            ^^^
+2 |
+3 | def add(a,b): return a+b
+  |
+help: Remove unused import
+
+Found 3 errors.
+[*] 3 fixable with the `--fix` option.
+(base) bettykim@ww160830 MLOps-Practical-2 % ruff check example.py --fix
+E902 No such file or directory (os error 2)
+--> example.py:1:1
+
+Found 1 error.
+(base) bettykim@ww160830 MLOps-Practical-2 % ruff check example2.py --fix
+Found 3 errors (3 fixed, 0 remaining).
+(base) bettykim@ww160830 MLOps-Practical-2 % src = ["example2.py"]
+zsh: no matches found: [example2.py]
+(base) bettykim@ww160830 MLOps-Practical-2 % ruff check .
+warning: The top-level linter settings are deprecated in favour of their counterparts in the `lint` section. Please update the following options in `pyproject.toml`:
+  - 'ignore' -> 'lint.ignore'
+  - 'select' -> 'lint.select'
+All checks passed!
+(base) bettykim@ww160830 MLOps-Practical-2 % ruff check . -- fix
+warning: The top-level linter settings are deprecated in favour of their counterparts in the `lint` section. Please update the following options in `pyproject.toml`:
+  - 'ignore' -> 'lint.ignore'
+  - 'select' -> 'lint.select'
+E902 No such file or directory (os error 2)
+--> fix:1:1
+
+Found 1 error.
+(base) bettykim@ww160830 MLOps-Practical-2 % ruff check . --fix
+warning: The top-level linter settings are deprecated in favour of their counterparts in the `lint` section. Please update the following options in `pyproject.toml`:
+  - 'ignore' -> 'lint.ignore'
+  - 'select' -> 'lint.select'
+All checks passed!
+(base) bettykim@ww160830 MLOps-Practical-2 % ruff check . --fix
+All checks passed!
+(base) bettykim@ww160830 MLOps-Practical-2 % 
