@@ -1,0 +1,244 @@
+Last login: Sun Sep  7 19:08:38 on ttys000
+(base) bettykim@ww160830 ~ % pwd
+/Users/bettykim
+(base) bettykim@ww160830 ~ % ls
+Applications		Library			Programming Assignment	git-practice-start
+Desktop			Movies			Public
+Documents		Music			Zotero
+Downloads		Pictures		anaconda_projects
+(base) bettykim@ww160830 ~ % cd Desktop
+(base) bettykim@ww160830 Desktop % ls
+Application				Pre-Master DSS
+Documents				Screenshot 2025-09-06 at 13.27.42.png
+Master DSS
+(base) bettykim@ww160830 Desktop % cd "Master DSS"
+(base) bettykim@ww160830 Master DSS % ls
+Data Mining				Statistics & Methodology
+Reproducibility & Model Deployment	terminal-log.txt
+(base) bettykim@ww160830 Master DSS % cd "Reproducibility & Model Deployment"
+(base) bettykim@ww160830 Reproducibility & Model Deployment % ls
+MLOps-Practical-1	Week2			terminal-log.txt
+MLOps-Practical-2	myfolder
+(base) bettykim@ww160830 Reproducibility & Model Deployment % cd ..
+(base) bettykim@ww160830 Master DSS % ls
+Data Mining				Statistics & Methodology
+Reproducibility & Model Deployment	terminal-log.txt
+(base) bettykim@ww160830 Master DSS % cd "Reproducibility & Model Deployment"
+(base) bettykim@ww160830 Reproducibility & Model Deployment % ls
+MLOps-Practical-1	Week2			terminal-log.txt
+MLOps-Practical-2	myfolder
+(base) bettykim@ww160830 Reproducibility & Model Deployment % cd MLOps-Practical-2
+(base) bettykim@ww160830 MLOps-Practical-2 % ls
+my_project
+(base) bettykim@ww160830 MLOps-Practical-2 % mkdir myfolder
+(base) bettykim@ww160830 MLOps-Practical-2 % touch file.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % rm file.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % touch file.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % cat file.txt
+Line 1
+Line 2
+Line 3
+Line 4
+Line 5
+(base) bettykim@ww160830 MLOps-Practical-2 % less file.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % head -n 3 file.txt
+Line 1
+Line 2
+Line 3
+(base) bettykim@ww160830 MLOps-Practical-2 % tail -n 2 file.txt
+Line 4
+Line 5
+(base) bettykim@ww160830 MLOps-Practical-2 % cp file.txt copy.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % mv copy.txt rename.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % ls
+file.txt	my_project	myfolder	rename.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % ls
+file.txt	my_project	myfolder	rename.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % cd myfolder
+(base) bettykim@ww160830 myfolder % ls
+(base) bettykim@ww160830 myfolder % mkdir my_project
+(base) bettykim@ww160830 myfolder % cd my_project
+(base) bettykim@ww160830 my_project % mkdir -p scripts
+(base) bettykim@ww160830 my_project % nano scripts/prep_data.sh
+(base) bettykim@ww160830 my_project % nano scripts/prep_data.sh
+(base) bettykim@ww160830 my_project % chmod +x scripts/prep_data.sh
+./scripts/prep_data.sh 
+[INFO] Preparing data directory structure...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  3716  100  3716    0     0  21890      0 --:--:-- --:--:-- --:--:-- 21988
+[INFO] Downloaded sample dataset: data/iris.csv
+[INFO] Added one synthetic row.
+[REPORT] Dataset now has      152 rows.
+[INFO] Done!
+(base) bettykim@ww160830 my_project % git clone https://github.com/bettybluee/MLOps-Practical-2
+Cloning into 'MLOps-Practical-2'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (6/6), done.
+(base) bettykim@ww160830 my_project % git status
+fatal: not a git repository (or any of the parent directories): .git
+(base) bettykim@ww160830 my_project % git add hello.txt
+fatal: not a git repository (or any of the parent directories): .git
+(base) bettykim@ww160830 my_project % git status
+fatal: not a git repository (or any of the parent directories): .git
+(base) bettykim@ww160830 my_project % git commit -m "A new file named hello.txt has been added"
+fatal: not a git repository (or any of the parent directories): .git
+(base) bettykim@ww160830 my_project % ls
+MLOps-Practical-2	data			scripts
+(base) bettykim@ww160830 my_project % cd MLOps-Practical-2
+(base) bettykim@ww160830 MLOps-Practical-2 % ls
+new.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % git add hello.txt
+fatal: pathspec 'hello.txt' did not match any files
+(base) bettykim@ww160830 MLOps-Practical-2 % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+(base) bettykim@ww160830 MLOps-Practical-2 % touch hello.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) bettykim@ww160830 MLOps-Practical-2 % git add hello.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % ls
+hello.txt	new.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % git commit -m "A new file name hello.txt has been added"
+[main e060f53] A new file name hello.txt has been added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) bettykim@ww160830 MLOps-Practical-2 % git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 301 bytes | 301.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/bettybluee/MLOps-Practical-2
+   681cd59..e060f53  main -> main
+(base) bettykim@ww160830 MLOps-Practical-2 % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+(base) bettykim@ww160830 MLOps-Practical-2 % git log
+commit e060f53c43a7b33c493453fa4643dc8f55770943 (HEAD -> main, origin/main, origin/HEAD)
+Author: Betty Kim <betty.rk.kim@gmail.com>
+Date:   Sun Sep 7 19:30:54 2025 +0200
+
+    A new file name hello.txt has been added
+
+commit 681cd59a2e792062a737fd358a858bc36fb995f9
+Author: Betty Kim <betty.rk.kim@gmail.com>
+Date:   Sun Sep 7 18:58:45 2025 +0200
+
+    A new file named new.txt has been added
+
+commit a8ab234c300984e766d99f6c16778d8b7a1b731b
+Author: bettybluee <betty.rk.kim@gmail.com>
+Date:   Sun Sep 7 18:29:06 2025 +0200
+
+    Initial commit
+(base) bettykim@ww160830 MLOps-Practical-2 % ls
+hello.txt	new.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % touch Makefile
+(base) bettykim@ww160830 MLOps-Practical-2 % nano Makefile
+(base) bettykim@ww160830 MLOps-Practical-2 % make prep
+make: *** No rule to make target `scripts/prep_data.sh', needed by `prep'.  Stop.
+(base) bettykim@ww160830 MLOps-Practical-2 % nano Makefile
+(base) bettykim@ww160830 MLOps-Practical-2 % make prep
+make: *** No rule to make target `prep_data.sh', needed by `prep'.  Stop.
+(base) bettykim@ww160830 MLOps-Practical-2 % nano Makefile
+(base) bettykim@ww160830 MLOps-Practical-2 % ls
+Makefile	hello.txt	new.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % make prep
+make: *** No rule to make target `prep_data.sh', needed by `prep'.  Stop.
+(base) bettykim@ww160830 MLOps-Practical-2 % nano Makefile
+(base) bettykim@ww160830 MLOps-Practical-2 % make prep
+make: *** No rule to make target `MLOps-Practical-2/prep_data.sh', needed by `prep'.  Stop.
+(base) bettykim@ww160830 MLOps-Practical-2 % ls
+Makefile	hello.txt	new.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % cd ..
+(base) bettykim@ww160830 my_project % ls
+MLOps-Practical-2	data			scripts
+(base) bettykim@ww160830 my_project % cd ..
+(base) bettykim@ww160830 myfolder % ls
+my_project
+(base) bettykim@ww160830 myfolder % cd ..
+(base) bettykim@ww160830 MLOps-Practical-2 % ls
+file.txt	my_project	myfolder	rename.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % cd ..
+(base) bettykim@ww160830 Reproducibility & Model Deployment % ls
+MLOps-Practical-1	Week2			terminal-log.txt
+MLOps-Practical-2	myfolder
+(base) bettykim@ww160830 Reproducibility & Model Deployment % touch Makefile
+(base) bettykim@ww160830 Reproducibility & Model Deployment % nano Makefile
+(base) bettykim@ww160830 Reproducibility & Model Deployment % make prep
+Makefile:2: *** missing separator.  Stop.
+(base) bettykim@ww160830 Reproducibility & Model Deployment % nano Makefile
+(base) bettykim@ww160830 Reproducibility & Model Deployment % make prep
+make: *** No rule to make target `prep_data.sh', needed by `prep'.  Stop.
+(base) bettykim@ww160830 Reproducibility & Model Deployment % ls
+MLOps-Practical-1	Makefile		myfolder
+MLOps-Practical-2	Week2			terminal-log.txt
+(base) bettykim@ww160830 Reproducibility & Model Deployment % cd MLOps-Practical-2
+(base) bettykim@ww160830 MLOps-Practical-2 % ls
+file.txt	my_project	myfolder	rename.txt
+(base) bettykim@ww160830 MLOps-Practical-2 % cd my_project
+(base) bettykim@ww160830 my_project % ls
+MLOps-Practical-2	data			hello.txt		scripts
+(base) bettykim@ww160830 my_project % cd scripts
+(base) bettykim@ww160830 scripts % ls
+Makefile	data		prep_data.sh
+(base) bettykim@ww160830 scripts % nano Makefile
+(base) bettykim@ww160830 scripts % make prep
+./prep_data.sh
+[INFO] Preparing data directory structure...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  3716  100  3716    0     0  21531      0 --:--:-- --:--:-- --:--:-- 21604
+[INFO] Downloaded sample dataset: data/iris.csv
+[INFO] Added one synthetic row.
+[REPORT] Dataset now has      152 rows.
+[INFO] Done!
+(base) bettykim@ww160830 scripts % nano Makefile
+(base) bettykim@ww160830 scripts % make clean
+rm -r data
+(base) bettykim@ww160830 scripts % ls
+Makefile	prep_data.sh
+(base) bettykim@ww160830 scripts % nano Makefile
+(base) bettykim@ww160830 scripts % make all
+rm -r data
+rm: data: No such file or directory
+make: *** [clean] Error 1
+(base) bettykim@ww160830 scripts % touch data
+(base) bettykim@ww160830 scripts % make all
+rm -r data
+./prep_data.sh
+[INFO] Preparing data directory structure...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  3716  100  3716    0     0  23813      0 --:--:-- --:--:-- --:--:-- 23974
+[INFO] Downloaded sample dataset: data/iris.csv
+[INFO] Added one synthetic row.
+[REPORT] Dataset now has      152 rows.
+[INFO] Done!
+(base) bettykim@ww160830 scripts % nano Makefile
+(base) bettykim@ww160830 scripts % make help
+make prep  - Run data preparation
+make clean - Remove data files
+make all   - Clean + Prep
